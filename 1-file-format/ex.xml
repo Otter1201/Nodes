@@ -1,0 +1,12 @@
+<prod>
+	<item type="old">
+		<name>Old car</name>
+		<color>blue</color>
+		<price>100</price>
+	</item>
+	<item type="new">
+		<name>New car</name>
+		<color>red</color>
+		<price>10000</price>
+	</item>
+</prod>

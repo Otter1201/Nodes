@@ -1,0 +1,14 @@
+{
+	"model": "iPhone",
+	"color": "gold",
+	"price": "10000",
+	"teset": {},
+	"vendor": {
+		"name": "Otter",
+		"web": "",
+		"tel": [
+			"1234567",
+			"7654321"
+		]
+	}
+}
