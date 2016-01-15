@@ -17,8 +17,10 @@ $ cat ex.json
 		]
 	}
 }
+```
 
-# Read JSON file
+## Read JSON file
+```js
 $ cat json-read.js
 var fs = require('fs');
 fs.readFile('./ex.json', 'utf8', function (err, data) {
@@ -43,8 +45,11 @@ $ node json-read.js
 		]
 	}
 }
+```
 
-# Write JSON file
+## Write JSON file
+```js
+
 $ cat json-write.js
 var fs = require('fs');
 
