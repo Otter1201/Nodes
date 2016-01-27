@@ -5,11 +5,18 @@ var data = fs.readFile('ex.html', 'utf8', function (err,d) {
   if (err) {
     return console.log(err);
   }
-  console.log(d);
+  // console.log(d);
 	var $ = ch.load(d);
-	console.log($);
+	
+	// Method 1
+	console.log($('ul li').text());
+	
+	// Method 2: each method
+	$('li').each(function(ind, el) {
+		var i = $(el).text();
+		console.log(i);
+	});
 });
-// console.log(data);
 
 // var fs = require('fs');
 // var ch = require('cheerio');

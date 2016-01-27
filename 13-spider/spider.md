@@ -83,8 +83,39 @@ user:~ $ npm install cheerio
 cheerio解析網頁可以使用selector來達成
 
 ```js
+user:~ $ cat selector.js
+
+var fs = require('fs');
+var ch = require('cheerio');
+var data = '<li class=\"apple\">Apple<li>' + '<li class=\"pple\">pple<li>';
+var $ = ch.load(data);
+console.log($('li.apple').text());
+
+# Load html file
 user:~ $ cat ex.html
 
+<ul id="fruits">
+	<li class="apple">Apple</li>
+	<li class="orange">Orange</li>
+	<li class="pear">Pear</li>
+</ul>
+
+user:~ $ cat selector.js
+
+var fs = require('fs');      // fs to load .html file
+var ch = require('cheerio');
+
+var data = fs.readFile('ex.html', 'utf8', function (err,d) {
+  if (err) {
+    return console.log(err);
+  }
+  // console.log(d);
+	var $ = ch.load(d);
+	console.log($('li.apple').text());
+});
+
+user:~ $ node select.js
+Apple
 ```
 
 
